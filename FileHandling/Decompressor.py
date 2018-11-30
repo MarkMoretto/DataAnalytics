@@ -5,7 +5,7 @@ This module extracts compressed files into a user-set directory.
 
 Example usage:
     >>> base_filename = 'miscfile.ver.1.0.1.tar.gz'
-    >>> destination_directory = 'C:\\Users\\MyUsername\\Desktop'  <-- Use single backslash from command line
+    >>> destination_directory = 'C:\...\path_to_directory_where_file_should_be_extracted' 
     >>> extract_file(base_filename, destination_directory)
 """
 
