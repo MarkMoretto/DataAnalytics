@@ -31,8 +31,13 @@ class FormatDF(object):
 
 
     def clean_data(data_frame, print_nan_count=False):
-        """ Will convert int to float and fill nan with zero. """
+        """ Will convert int to float and fill nan with zero. """      
+        
         self.numeric_dic = self.__find_numeric()
+        
+        # TODO: Return dataframe with only floats
+        # TODO: Provide option on how to handle non-numeric values
+        
         df = data_frame.copy(deep = True)
         if print_nan_count:
             print(f'Null values found in each column:\n{df.isna().sum()}')
@@ -42,8 +47,7 @@ class FormatDF(object):
                 df[i] = df[i].astype(float)
             return df
 
-
-
+        
 
 class Jaccard(object):
     """
@@ -54,6 +58,9 @@ class Jaccard(object):
         >>> jac = Jaccard()
         >>> df3 = jac.calc_jaccard(data_frame)
     """
+    
+    # TODO: Test sampler print function.
+    
     def __init__(self, data_frame=None):
         self.df = data_frame
         if not self.df is None:
